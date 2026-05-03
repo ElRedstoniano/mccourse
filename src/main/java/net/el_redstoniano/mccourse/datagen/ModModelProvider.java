@@ -6,10 +6,9 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 
-public class ModModelProvider extends FabricModelProvider { // Block and Items
+public class ModModelProvider extends FabricModelProvider { // Blocks and Items
     public ModModelProvider(FabricPackOutput output) {
         super(output);
     }
@@ -20,6 +19,8 @@ public class ModModelProvider extends FabricModelProvider { // Block and Items
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_BISMUTH_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.BISMUTH_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.BISMUTH_DEEPSLATE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.BISMUTH_NETHER_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.BISMUTH_END_ORE);
     }
 
     @Override
