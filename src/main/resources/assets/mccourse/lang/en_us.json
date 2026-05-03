@@ -6,6 +6,8 @@
   "block.mccourse.raw_bismuth_block": "Raw bismuth block",
   "block.mccourse.bismuth_ore": "Bismuth ore",
   "block.mccourse.bismuth_deepslate_ore": "Bismuth deepslate ore",
+  "block.mccourse.bismuth_nether_ore": "Bismuth nether ore",
+  "block.mccourse.bismuth_end_ore": "Bismuth end ore",
 
   "creativetab.mccourse.bismuth_items": "Bismuth items",
   "creativetab.mccourse.bismuth_blocks": "Bismuth blocks"

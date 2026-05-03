@@ -24,10 +24,20 @@ public class ModBlocks {
     public static final Block RAW_BISMUTH_BLOCK = registerBlock("raw_bismuth_block",
             properties -> new Block(properties.strength(4f)
                     .requiresCorrectToolForDrops()));
+
     public static final Block BISMUTH_ORE = registerBlock("bismuth_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2,4),
                     properties.strength(3f).requiresCorrectToolForDrops()));
+
     public static final Block BISMUTH_DEEPSLATE_ORE = registerBlock("bismuth_deepslate_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3,5),
+                    properties.strength(4f).requiresCorrectToolForDrops()));
+
+    public static final Block BISMUTH_NETHER_ORE = registerBlock("bismuth_nether_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3,5),
+                    properties.strength(3f).requiresCorrectToolForDrops()));
+
+    public static final Block BISMUTH_END_ORE = registerBlock("bismuth_end_ore",
             properties -> new DropExperienceBlock(UniformInt.of(3,5),
                     properties.strength(4f).requiresCorrectToolForDrops()));
 
