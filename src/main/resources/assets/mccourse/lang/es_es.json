@@ -1,0 +1,12 @@
+{
+  "item.mccourse.bismuth": "Bismuto",
+  "item.mccourse.raw_bismuth": "Bismuto en crudo",
+
+  "block.mccourse.bismuth_block": "Bloque de bismuto",
+  "block.mccourse.raw_bismuth_block": "Bloque de bismuto en crudo",
+  "block.mccourse.bismuth_ore": "Mena de bismuto",
+  "block.mccourse.bismuth_deepslate_ore": "Mena de pizarra profunda de bismuto",
+
+  "creativetab.mccourse.bismuth_items": "Items de bismuto",
+  "creativetab.mccourse.bismuth_blocks": "Bloques de bismuto"
+}
