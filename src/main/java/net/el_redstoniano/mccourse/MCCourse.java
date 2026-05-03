@@ -1,7 +1,11 @@
 package net.el_redstoniano.mccourse;
 
+import net.el_redstoniano.mccourse.block.ModBlocks;
+import net.el_redstoniano.mccourse.item.ModCreativeModeTabs;
+import net.el_redstoniano.mccourse.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +24,13 @@ public class MCCourse implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModCreativeModeTabs.registerCreativeModeTabs();
+
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+	}
+
+	public static Identifier id(String path) {
+		return Identifier.fromNamespaceAndPath(MOD_ID, path);
 	}
 }
