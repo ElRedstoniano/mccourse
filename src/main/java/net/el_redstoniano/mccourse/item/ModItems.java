@@ -1,6 +1,7 @@
 package net.el_redstoniano.mccourse.item;
 
 import net.el_redstoniano.mccourse.MCCourse;
+import net.el_redstoniano.mccourse.item.custom.ChiselItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -14,6 +15,8 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item BISMUTH = registerItem("bismuth", Item::new);
     public static final Item RAW_BISMUTH = registerItem("raw_bismuth", Item::new);
+    public static final Item CHISEL = registerItem("chisel",
+            properties -> new ChiselItem(properties.durability(32)));
 
     public static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, MCCourse.id(name),
