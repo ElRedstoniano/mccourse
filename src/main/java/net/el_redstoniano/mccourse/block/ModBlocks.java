@@ -1,6 +1,7 @@
 package net.el_redstoniano.mccourse.block;
 
 import net.el_redstoniano.mccourse.MCCourse;
+import net.el_redstoniano.mccourse.block.custom.MagicBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -40,6 +41,11 @@ public class ModBlocks {
     public static final Block BISMUTH_END_ORE = registerBlock("bismuth_end_ore",
             properties -> new DropExperienceBlock(UniformInt.of(3,5),
                     properties.strength(4f).requiresCorrectToolForDrops()));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            properties -> new MagicBlock(
+                    properties.strength(2f)
+                            .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block blockToRegister = function.apply(BlockBehaviour.Properties.of()

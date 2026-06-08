@@ -10,6 +10,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -51,6 +52,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .requires(ModBlocks.RAW_BISMUTH_BLOCK)
                         .unlockedBy(getHasName(ModBlocks.RAW_BISMUTH_BLOCK), has(ModBlocks.RAW_BISMUTH_BLOCK))
                         .save(output/*, new_"name_to_avoid_duplicate_recipe_names" */);
+
+                // Magic block
+                shapeless(RecipeCategory.MISC, ModBlocks.MAGIC_BLOCK, 1)
+                        .requires(Blocks.GOLD_BLOCK)
+                        .requires(ModItems.BISMUTH)
+                        .requires(Blocks.LAPIS_BLOCK)
+                        .unlockedBy(getHasName(Blocks.GOLD_BLOCK), has(Blocks.GOLD_BLOCK))
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .unlockedBy(getHasName(Blocks.LAPIS_BLOCK), has(Blocks.LAPIS_BLOCK))
+                        .save(output);
             }
         };
     }
