@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BISMUTH);
                         output.accept(ModItems.RAW_BISMUTH);
                         output.accept(ModItems.CHISEL);
+                        output.accept(ModItems.CAULIFLOWER);
                     }).build());
 
     public static final CreativeModeTab BISMUTH_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
