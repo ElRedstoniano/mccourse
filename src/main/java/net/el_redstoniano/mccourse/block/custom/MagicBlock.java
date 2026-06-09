@@ -1,6 +1,7 @@
 package net.el_redstoniano.mccourse.block.custom;
 
 import net.el_redstoniano.mccourse.item.ModItems;
+import net.el_redstoniano.mccourse.tag.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -47,6 +48,7 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack item) {
-        return item.is(ModItems.BISMUTH) || item.is(Items.IRON_INGOT);
+        //return item.is(ModItems.BISMUTH) || item.is(Items.IRON_INGOT);
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 }
