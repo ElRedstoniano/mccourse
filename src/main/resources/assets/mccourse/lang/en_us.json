@@ -13,6 +13,10 @@
   "block.mccourse.bismuth_end_ore": "Bismuth end ore",
   "block.mccourse.magic_block": "Magic block",
 
+  "tooltip.mccourse.chisel": "Press §eShift§r for more information!",
+  "tooltip.mccourse.chisel.shift_down": "This item chisels blocks!",
+  "tooltip.mccourse.cauliflower": "This is delicious!",
+
   "creativetab.mccourse.bismuth_items": "Bismuth items",
   "creativetab.mccourse.bismuth_blocks": "Bismuth blocks"
 }
