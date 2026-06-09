@@ -1,9 +1,6 @@
 package net.el_redstoniano.mccourse;
 
-import net.el_redstoniano.mccourse.datagen.ModBlockLootTableProvider;
-import net.el_redstoniano.mccourse.datagen.ModBlockTagProvider;
-import net.el_redstoniano.mccourse.datagen.ModModelProvider;
-import net.el_redstoniano.mccourse.datagen.ModRecipeProvider;
+import net.el_redstoniano.mccourse.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
@@ -19,5 +16,6 @@ public class MCCourseDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
 	}
 }
