@@ -21,6 +21,7 @@ public class ModItems {
     public static final Item CAULIFLOWER = registerItem("cauliflower",
             properties -> new Item(properties.food(ModFoodProperties.CAULIFLOWER,
                     ModFoodProperties.CAULIFLOWER_EFFECT)));
+    public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", Item::new);
 
     public static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, MCCourse.id(name),

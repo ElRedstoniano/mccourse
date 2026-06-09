@@ -3,6 +3,7 @@ package net.el_redstoniano.mccourse;
 import net.el_redstoniano.mccourse.block.ModBlocks;
 import net.el_redstoniano.mccourse.item.ModCreativeModeTabs;
 import net.el_redstoniano.mccourse.item.ModItems;
+import net.el_redstoniano.mccourse.registries.ModFuels;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -28,6 +29,8 @@ public class MCCourse implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModFuels.registerModFuels();
 	}
 
 	public static Identifier id(String path) {
