@@ -46,6 +46,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BISMUTH_FENCE);
                         output.accept(ModBlocks.BISMUTH_FENCE_GATE);
                         output.accept(ModBlocks.BISMUTH_WALL);
+
+                        output.accept(ModBlocks.BISMUTH_DOOR);
+                        output.accept(ModBlocks.BISMUTH_TRAPDOOR);
                     }).build());
 
     public static void registerCreativeModeTabs() {

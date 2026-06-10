@@ -28,6 +28,8 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_FENCE)
                 .add(ModBlocks.BISMUTH_FENCE_GATE)
                 .add(ModBlocks.BISMUTH_WALL)
+                .add(ModBlocks.BISMUTH_DOOR)
+                .add(ModBlocks.BISMUTH_TRAPDOOR)
         ;
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
@@ -56,5 +58,10 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_FENCE_GATE);
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.BISMUTH_WALL);
+
+        valueLookupBuilder(BlockTags.DOORS)
+                .add(ModBlocks.BISMUTH_DOOR);
+        valueLookupBuilder(BlockTags.TRAPDOORS)
+                .add(ModBlocks.BISMUTH_TRAPDOOR);
     }
 }

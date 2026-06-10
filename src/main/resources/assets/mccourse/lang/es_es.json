@@ -19,6 +19,8 @@
   "block.mccourse.bismuth_fence": "Valla de bismuto",
   "block.mccourse.bismuth_fence_gate": "Puerta de valla de bismuto",
   "block.mccourse.bismuth_wall": "Muro de bismuto",
+  "block.mccourse.bismuth_door": "Puerta de bismuto",
+  "block.mccourse.bismuth_trapdoor": "Trampilla de bismuto",
 
   "tooltip.mccourse.chisel": "¡Presiona §eShift§r para más información!",
   "tooltip.mccourse.chisel.shift_down": "¡Este item cincela bloques!",

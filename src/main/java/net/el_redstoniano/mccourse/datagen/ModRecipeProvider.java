@@ -89,6 +89,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 // Wall
                 wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_WALL, ModBlocks.BISMUTH_BLOCK);
+
+                // Door
+                doorBuilder(ModBlocks.BISMUTH_DOOR, Ingredient.of(ModItems.BISMUTH))
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .save(output);
+                // Trapdoor
+                trapdoorBuilder(ModBlocks.BISMUTH_TRAPDOOR, Ingredient.of(ModItems.BISMUTH))
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .save(output);
             }
         };
     }

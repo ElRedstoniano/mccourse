@@ -19,6 +19,8 @@
   "block.mccourse.bismuth_fence": "Bismuth fence",
   "block.mccourse.bismuth_fence_gate": "Bismuth fence gate",
   "block.mccourse.bismuth_wall": "Bismuth wall",
+  "block.mccourse.bismuth_door": "Bismuth door",
+  "block.mccourse.bismuth_trapdoor": "Bismuth trapdoor",
 
   "tooltip.mccourse.chisel": "Press §eShift§r for more information!",
   "tooltip.mccourse.chisel.shift_down": "This item chisels blocks!",
