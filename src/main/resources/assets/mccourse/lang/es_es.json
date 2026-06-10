@@ -14,6 +14,8 @@
   "block.mccourse.magic_block": "Bloque mágico",
   "block.mccourse.bismuth_stairs": "Escalera de bismuto",
   "block.mccourse.bismuth_slab": "Losa de bismuto",
+  "block.mccourse.bismuth_button": "Botón de bismuto",
+  "block.mccourse.bismuth_pressure_plate": "Placa de presión de bismuto",
 
   "tooltip.mccourse.chisel": "¡Presiona §eShift§r para más información!",
   "tooltip.mccourse.chisel.shift_down": "¡Este item cincela bloques!",

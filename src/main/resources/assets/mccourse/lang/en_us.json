@@ -14,6 +14,8 @@
   "block.mccourse.magic_block": "Magic block",
   "block.mccourse.bismuth_stairs": "Bismuth stairs",
   "block.mccourse.bismuth_slab": "Bismuth slab",
+  "block.mccourse.bismuth_button": "Bismuth button",
+  "block.mccourse.bismuth_pressure_plate": "Bismuth pressure plate",
 
   "tooltip.mccourse.chisel": "Press §eShift§r for more information!",
   "tooltip.mccourse.chisel.shift_down": "This item chisels blocks!",

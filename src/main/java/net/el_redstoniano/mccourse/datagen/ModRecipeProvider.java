@@ -70,6 +70,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 // Slab -> Not a builder == no need of unlockedBy + save
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_SLAB, ModBlocks.BISMUTH_BLOCK);
+
+                // Button
+                buttonBuilder(ModBlocks.BISMUTH_BUTTON, Ingredient.of(ModBlocks.BISMUTH_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.BISMUTH_BLOCK), has(ModBlocks.BISMUTH_BLOCK))
+                        .save(output);
+
+                // Pressure plate
+                pressurePlate(ModBlocks.BISMUTH_PRESSURE_PLATE, ModBlocks.BISMUTH_BLOCK);
             }
         };
     }

@@ -39,6 +39,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.BISMUTH_STAIRS);
         add(ModBlocks.BISMUTH_SLAB, createSlabItemTable(ModBlocks.BISMUTH_SLAB));
+
+        dropSelf(ModBlocks.BISMUTH_BUTTON);
+        dropSelf(ModBlocks.BISMUTH_PRESSURE_PLATE);
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

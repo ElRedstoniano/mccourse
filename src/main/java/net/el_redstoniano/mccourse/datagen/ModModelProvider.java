@@ -27,6 +27,8 @@ public class ModModelProvider extends FabricModelProvider { // Blocks and Items
 
         bismuthFamily.stairs(ModBlocks.BISMUTH_STAIRS);
         bismuthFamily.slab(ModBlocks.BISMUTH_SLAB);
+        bismuthFamily.button(ModBlocks.BISMUTH_BUTTON);
+        bismuthFamily.pressurePlate(ModBlocks.BISMUTH_PRESSURE_PLATE);
     }
 
     @Override
