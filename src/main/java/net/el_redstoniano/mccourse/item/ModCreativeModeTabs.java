@@ -39,6 +39,9 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.BISMUTH_STAIRS);
                         output.accept(ModBlocks.BISMUTH_SLAB);
+
+                        output.accept(ModBlocks.BISMUTH_BUTTON);
+                        output.accept(ModBlocks.BISMUTH_PRESSURE_PLATE);
                     }).build());
 
     public static void registerCreativeModeTabs() {

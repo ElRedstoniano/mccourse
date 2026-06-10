@@ -40,5 +40,11 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
 
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.BISMUTH_STAIRS);
+
+        valueLookupBuilder(BlockTags.BUTTONS)
+                .add(ModBlocks.BISMUTH_BUTTON);
+
+        valueLookupBuilder(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.BISMUTH_PRESSURE_PLATE);
     }
 }
