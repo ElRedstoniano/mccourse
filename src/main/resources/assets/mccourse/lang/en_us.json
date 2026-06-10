@@ -16,6 +16,9 @@
   "block.mccourse.bismuth_slab": "Bismuth slab",
   "block.mccourse.bismuth_button": "Bismuth button",
   "block.mccourse.bismuth_pressure_plate": "Bismuth pressure plate",
+  "block.mccourse.bismuth_fence": "Bismuth fence",
+  "block.mccourse.bismuth_fence_gate": "Bismuth fence gate",
+  "block.mccourse.bismuth_wall": "Bismuth wall",
 
   "tooltip.mccourse.chisel": "Press §eShift§r for more information!",
   "tooltip.mccourse.chisel.shift_down": "This item chisels blocks!",
