@@ -78,6 +78,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // Pressure plate
                 pressurePlate(ModBlocks.BISMUTH_PRESSURE_PLATE, ModBlocks.BISMUTH_BLOCK);
+
+                // Fence
+                fenceBuilder(ModBlocks.BISMUTH_FENCE, Ingredient.of(ModBlocks.BISMUTH_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.BISMUTH_BLOCK), has(ModBlocks.BISMUTH_BLOCK))
+                        .save(output);
+                // Fence gate
+                fenceBuilder(ModBlocks.BISMUTH_FENCE_GATE, Ingredient.of(ModBlocks.BISMUTH_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.BISMUTH_BLOCK), has(ModBlocks.BISMUTH_BLOCK))
+                        .save(output);
+                // Wall
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_WALL, ModBlocks.BISMUTH_BLOCK);
             }
         };
     }
