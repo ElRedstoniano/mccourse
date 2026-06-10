@@ -10,9 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
@@ -46,6 +44,12 @@ public class ModBlocks {
             properties -> new MagicBlock(
                     properties.strength(2f)
                             .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final Block BISMUTH_STAIRS = registerBlock("bismuth_stairs",
+            properties -> new StairBlock(ModBlocks.BISMUTH_BLOCK.defaultBlockState(),
+                    properties.strength(2f).requiresCorrectToolForDrops()));
+    public static final Block BISMUTH_SLAB = registerBlock("bismuth_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresCorrectToolForDrops()));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block blockToRegister = function.apply(BlockBehaviour.Properties.of()
