@@ -73,6 +73,12 @@ public class ModBlocks {
                     forceSolidOn().strength(2f).requiresCorrectToolForDrops()));
     public static final Block BISMUTH_WALL = registerBlock("bismuth_wall",
             properties -> new WallBlock(properties.strength(2f).requiresCorrectToolForDrops()));
+    public static final Block BISMUTH_DOOR = registerBlock("bismuth_door",
+            properties -> new DoorBlock(BlockSetType.IRON,
+                    properties.strength(2f).noOcclusion().requiresCorrectToolForDrops()));
+    public static final Block BISMUTH_TRAPDOOR = registerBlock("bismuth_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.IRON,
+                    properties.strength(2f).noOcclusion().requiresCorrectToolForDrops()));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
