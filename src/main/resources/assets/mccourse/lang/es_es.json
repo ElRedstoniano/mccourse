@@ -4,6 +4,11 @@
   "item.mccourse.chisel": "Cincel",
   "item.mccourse.cauliflower": "Coliflor",
   "item.mccourse.starlight_ashes": "Cenizas de luz estelar",
+  "item.mccourse.bismuth_sword": "Espada de bismuto",
+  "item.mccourse.bismuth_pickaxe": "Pico de bismuto",
+  "item.mccourse.bismuth_shovel": "Pala de bismuto",
+  "item.mccourse.bismuth_axe": "Hacha de bismuto",
+  "item.mccourse.bismuth_hoe": "Azada de bismuto",
 
   "block.mccourse.bismuth_block": "Bloque de bismuto",
   "block.mccourse.raw_bismuth_block": "Bloque de bismuto en crudo",

@@ -4,6 +4,11 @@
   "item.mccourse.chisel": "Chisel",
   "item.mccourse.cauliflower": "Cauliflower",
   "item.mccourse.starlight_ashes": "Starlight ashes",
+  "item.mccourse.bismuth_sword": "Bismuth sword",
+  "item.mccourse.bismuth_pickaxe": "Bismuth pickaxe",
+  "item.mccourse.bismuth_shovel": "Bismuth shovel",
+  "item.mccourse.bismuth_axe": "Bismuth axe",
+  "item.mccourse.bismuth_hoe": "Bismuth hoe",
 
   "block.mccourse.bismuth_block": "Bismuth block",
   "block.mccourse.raw_bismuth_block": "Raw bismuth block",

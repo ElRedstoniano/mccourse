@@ -1,6 +1,7 @@
 package net.el_redstoniano.mccourse.datagen;
 
 import net.el_redstoniano.mccourse.block.ModBlocks;
+import net.el_redstoniano.mccourse.tag.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
@@ -63,5 +64,11 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_DOOR);
         valueLookupBuilder(BlockTags.TRAPDOORS)
                 .add(ModBlocks.BISMUTH_TRAPDOOR);
+
+        valueLookupBuilder(ModTags.Blocks.NEEDS_BISMUTH_TOOL)
+                .add(ModBlocks.MAGIC_BLOCK)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_BISMUTH_TOOL)
+                .addOptionalTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
     }
 }
