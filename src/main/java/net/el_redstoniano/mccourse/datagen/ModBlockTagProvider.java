@@ -70,5 +70,10 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
         valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_BISMUTH_TOOL)
                 .addOptionalTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
+
+        valueLookupBuilder(ModTags.Blocks.PAXEL_MINEABLE)
+                .forceAddTag(BlockTags.MINEABLE_WITH_PICKAXE) // forceAddTag is for vanilla tags that hasn't loaded yet
+                .forceAddTag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .forceAddTag(BlockTags.MINEABLE_WITH_AXE);
     }
 }

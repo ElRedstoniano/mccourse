@@ -3,6 +3,7 @@ package net.el_redstoniano.mccourse.item;
 import net.el_redstoniano.mccourse.MCCourse;
 import net.el_redstoniano.mccourse.food.ModFoodProperties;
 import net.el_redstoniano.mccourse.item.custom.ChiselItem;
+import net.el_redstoniano.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.core.Registry;
@@ -42,6 +43,9 @@ public class ModItems {
             properties -> new AxeItem(ModToolMaterials.BISMUTH, 6, -3.2f, properties));
     public static final Item BISMUTH_HOE = registerItem("bismuth_hoe",
             properties -> new HoeItem(ModToolMaterials.BISMUTH, 0, -3f, properties));
+
+    public static final Item BISMUTH_PAXEL = registerItem("bismuth_paxel",
+            properties -> new PaxelItem(ModToolMaterials.BISMUTH, 1, -2.2f, properties));
 
     public static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, MCCourse.id(name),
