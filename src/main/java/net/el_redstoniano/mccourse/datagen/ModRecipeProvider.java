@@ -160,6 +160,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.BISMUTH_AXE), has(ModItems.BISMUTH_AXE))
                         .unlockedBy(getHasName(ModItems.BISMUTH_SHOVEL), has(ModItems.BISMUTH_SHOVEL))
                         .save(output);
+
+                // Bismuth hammer
+                shaped(RecipeCategory.TOOLS, ModItems.BISMUTH_HAMMER, 1)
+                        .pattern("BBB")
+                        .pattern("BSB")
+                        .pattern(" S ")
+                        .define('B', ModItems.BISMUTH)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .save(output);
             }
         };
     }
