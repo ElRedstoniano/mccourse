@@ -4,6 +4,7 @@ import net.el_redstoniano.mccourse.MCCourse;
 import net.el_redstoniano.mccourse.food.ModFoodProperties;
 import net.el_redstoniano.mccourse.item.custom.ChiselItem;
 import net.el_redstoniano.mccourse.item.custom.HammerItem;
+import net.el_redstoniano.mccourse.item.custom.ModArmorItem;
 import net.el_redstoniano.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
@@ -53,7 +54,7 @@ public class ModItems {
             properties -> new HammerItem(properties.pickaxe(ModToolMaterials.BISMUTH, 8, -3.4f)));
 
     public static final Item BISMUTH_HELMET = registerItem("bismuth_helmet",
-            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.HELMET)));
+            properties -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item BISMUTH_CHESTPLATE = registerItem("bismuth_chestplate",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
     public static final Item BISMUTH_LEGGINGS = registerItem("bismuth_leggings",
