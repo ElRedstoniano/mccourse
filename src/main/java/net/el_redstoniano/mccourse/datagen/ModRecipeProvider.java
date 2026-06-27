@@ -170,6 +170,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('S', Items.STICK)
                         .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
                         .save(output);
+
+                // Bismuth helmet
+                shaped(RecipeCategory.COMBAT, ModItems.BISMUTH_HELMET, 1)
+                        .pattern("BBB")
+                        .pattern("B B")
+                        .define('B', ModItems.BISMUTH)
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .save(output);
+
+                // Bismuth chestplate
+                shaped(RecipeCategory.COMBAT, ModItems.BISMUTH_CHESTPLATE, 1)
+                        .pattern("B B")
+                        .pattern("BBB")
+                        .pattern("BBB")
+                        .define('B', ModItems.BISMUTH)
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .save(output);
+
+                // Bismuth leggings
+                shaped(RecipeCategory.COMBAT, ModItems.BISMUTH_LEGGINGS, 1)
+                        .pattern("BBB")
+                        .pattern("B B")
+                        .pattern("B B")
+                        .define('B', ModItems.BISMUTH)
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .save(output);
+
+                // Bismuth boots
+                shaped(RecipeCategory.COMBAT, ModItems.BISMUTH_BOOTS, 1)
+                        .pattern("B B")
+                        .pattern("B B")
+                        .define('B', ModItems.BISMUTH)
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .save(output);
             }
         };
     }

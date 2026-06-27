@@ -33,5 +33,10 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ItemTags.SHOVELS).add(ModItems.BISMUTH_SHOVEL).add(ModItems.BISMUTH_PAXEL);
         valueLookupBuilder(ItemTags.AXES).add(ModItems.BISMUTH_AXE).add(ModItems.BISMUTH_PAXEL);
         valueLookupBuilder(ItemTags.HOES).add(ModItems.BISMUTH_HOE);
+
+        valueLookupBuilder(ItemTags.HEAD_ARMOR).add(ModItems.BISMUTH_HELMET);
+        valueLookupBuilder(ItemTags.CHEST_ARMOR).add(ModItems.BISMUTH_CHESTPLATE);
+        valueLookupBuilder(ItemTags.LEG_ARMOR).add(ModItems.BISMUTH_LEGGINGS);
+        valueLookupBuilder(ItemTags.FOOT_ARMOR).add(ModItems.BISMUTH_BOOTS);
     }
 }
