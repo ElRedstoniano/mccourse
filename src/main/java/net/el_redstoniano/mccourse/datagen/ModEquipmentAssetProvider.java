@@ -26,6 +26,8 @@ public class ModEquipmentAssetProvider implements DataProvider {
         consumer.accept(ModArmorMaterials.BISMUTH_KEY,
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(MCCourse.id("bismuth"), false)
+                        .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY,
+                                new EquipmentClientInfo.Layer(MCCourse.id("bismuth")))
                         .build());
     }
 
