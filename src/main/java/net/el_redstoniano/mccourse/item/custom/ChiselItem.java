@@ -2,6 +2,7 @@ package net.el_redstoniano.mccourse.item.custom;
 
 
 import net.el_redstoniano.mccourse.block.ModBlocks;
+import net.el_redstoniano.mccourse.data.ModDataComponents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -49,6 +50,7 @@ public class ChiselItem extends Item {
 
                 context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), ((ServerPlayer) context.getPlayer()),
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
+                context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
             }
         }
 
@@ -61,6 +63,10 @@ public class ChiselItem extends Item {
             builder.accept(Component.translatable("tooltip.mccourse.chisel.shift_down"));
         } else {
             builder.accept(Component.translatable("tooltip.mccourse.chisel"));
+        }
+
+        if (itemStack.get(ModDataComponents.COORDINATES) != null) {
+            builder.accept(Component.translatable("tooltip.mccourse.chisel.coordinates", "" + itemStack.get(ModDataComponents.COORDINATES)));
         }
 
         super.appendHoverText(itemStack, context, display, builder, tooltipFlag);

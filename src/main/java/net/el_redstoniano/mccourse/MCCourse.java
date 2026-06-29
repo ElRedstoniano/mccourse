@@ -1,6 +1,7 @@
 package net.el_redstoniano.mccourse;
 
 import net.el_redstoniano.mccourse.block.ModBlocks;
+import net.el_redstoniano.mccourse.data.ModDataComponents;
 import net.el_redstoniano.mccourse.item.ModCreativeModeTabs;
 import net.el_redstoniano.mccourse.item.ModItems;
 import net.el_redstoniano.mccourse.registries.ModFuels;
@@ -29,6 +30,8 @@ public class MCCourse implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModDataComponents.registerDataComponents();
 
 		ModFuels.registerModFuels();
 	}

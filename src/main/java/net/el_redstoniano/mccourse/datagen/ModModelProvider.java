@@ -2,6 +2,7 @@ package net.el_redstoniano.mccourse.datagen;
 
 import net.el_redstoniano.mccourse.block.ModBlocks;
 import net.el_redstoniano.mccourse.block.custom.BismuthLampBlock;
+import net.el_redstoniano.mccourse.data.ModDataComponents;
 import net.el_redstoniano.mccourse.item.ModArmorMaterials;
 import net.el_redstoniano.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
@@ -10,12 +11,19 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.renderer.item.ClientItem;
+import net.minecraft.client.renderer.item.ConditionalItemModel;
+import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider { // Blocks and Items
     public ModModelProvider(FabricPackOutput output) {
@@ -54,7 +62,7 @@ public class ModModelProvider extends FabricModelProvider { // Blocks and Items
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.BISMUTH, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RAW_BISMUTH, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.CHISEL, ModelTemplates.FLAT_ITEM);
+        //itemModelGenerators.generateFlatItem(ModItems.CHISEL, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.CAULIFLOWER, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STARLIGHT_ASHES, ModelTemplates.FLAT_ITEM);
 
@@ -76,6 +84,8 @@ public class ModModelProvider extends FabricModelProvider { // Blocks and Items
                 ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         itemModelGenerators.generateFlatItem(ModItems.BISMUTH_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+
+        generateChisel(itemModelGenerators);
     }
 
     private void createBismuthLamp(BlockModelGenerators blockModelGenerators) {
@@ -83,5 +93,26 @@ public class ModModelProvider extends FabricModelProvider { // Blocks and Items
         MultiVariant on = BlockModelGenerators.plainVariant(blockModelGenerators.createSuffixedVariant(ModBlocks.BISMUTH_LAMP, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube));
         blockModelGenerators.blockStateOutput.accept(MultiVariantGenerator.dispatch(ModBlocks.BISMUTH_LAMP)
                 .with(BlockModelGenerators.createBooleanModelDispatch(BismuthLampBlock.CLICKED, on, off)));
+    }
+
+    private void generateChisel(ItemModelGenerators itemModelGenerators) {
+        ItemModel.Unbaked unbakedChisel = ItemModelUtils.plainModel(itemModelGenerators.createFlatItemModel(ModItems.CHISEL,
+                ModelTemplates.FLAT_HANDHELD_ITEM));
+        ItemModel.Unbaked unbakedUsedChisel = ItemModelUtils.plainModel(itemModelGenerators.createFlatItemModel(ModItems.CHISEL,
+                "_used", ModelTemplates.FLAT_HANDHELD_ITEM));
+
+        // Getting the chisel model with texture changes based on coordinates component:
+//        itemModelGenerators.itemModelOutput.accept(ModItems.CHISEL,
+//                new ClientItem(new ConditionalItemModel.Unbaked(Optional.empty(),
+//                        new HasComponent(ModDataComponents.COORDINATES, false),
+//                        unbakedUsedChisel, unbakedChisel), new ClientItem.Properties(false, false,
+//                        1f)).model());
+        // Another way to do the same thing
+        itemModelGenerators.itemModelOutput.accept(ModItems.CHISEL,
+                /*new ClientItem(*/ItemModelUtils.conditional(Optional.empty(),
+                        new HasComponent(ModDataComponents.COORDINATES, false),
+                        unbakedUsedChisel, unbakedChisel),
+                new ClientItem.Properties(false, false,
+                        1f)/*).model()*/);
     }
 }

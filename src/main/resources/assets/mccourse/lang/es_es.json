@@ -39,6 +39,7 @@
 
   "tooltip.mccourse.chisel": "¡Presiona §eShift§r para más información!",
   "tooltip.mccourse.chisel.shift_down": "¡Este item cincela bloques!",
+  "tooltip.mccourse.chisel.coordinates": "Último bloque cambiado en %s",
   "tooltip.mccourse.cauliflower": "¡Esto es delicioso!",
 
   "creativetab.mccourse.bismuth_items": "Items de bismuto",
