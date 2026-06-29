@@ -1,14 +1,21 @@
 package net.el_redstoniano.mccourse.datagen;
 
 import net.el_redstoniano.mccourse.block.ModBlocks;
+import net.el_redstoniano.mccourse.block.custom.BismuthLampBlock;
 import net.el_redstoniano.mccourse.item.ModArmorMaterials;
 import net.el_redstoniano.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.MultiVariant;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class ModModelProvider extends FabricModelProvider { // Blocks and Items
     public ModModelProvider(FabricPackOutput output) {
@@ -39,6 +46,8 @@ public class ModModelProvider extends FabricModelProvider { // Blocks and Items
 
         blockModelGenerators.createDoor(ModBlocks.BISMUTH_DOOR);
         blockModelGenerators.createTrapdoor(ModBlocks.BISMUTH_TRAPDOOR);
+
+        createBismuthLamp(blockModelGenerators);
     }
 
     @Override
@@ -67,5 +76,12 @@ public class ModModelProvider extends FabricModelProvider { // Blocks and Items
                 ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         itemModelGenerators.generateFlatItem(ModItems.BISMUTH_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+    }
+
+    private void createBismuthLamp(BlockModelGenerators blockModelGenerators) {
+        MultiVariant off = BlockModelGenerators.plainVariant(TexturedModel.CUBE.create(ModBlocks.BISMUTH_LAMP, blockModelGenerators.modelOutput));
+        MultiVariant on = BlockModelGenerators.plainVariant(blockModelGenerators.createSuffixedVariant(ModBlocks.BISMUTH_LAMP, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube));
+        blockModelGenerators.blockStateOutput.accept(MultiVariantGenerator.dispatch(ModBlocks.BISMUTH_LAMP)
+                .with(BlockModelGenerators.createBooleanModelDispatch(BismuthLampBlock.CLICKED, on, off)));
     }
 }

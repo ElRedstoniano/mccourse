@@ -31,6 +31,7 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_WALL)
                 .add(ModBlocks.BISMUTH_DOOR)
                 .add(ModBlocks.BISMUTH_TRAPDOOR)
+                .add(ModBlocks.BISMUTH_LAMP)
         ;
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
