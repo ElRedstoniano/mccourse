@@ -38,5 +38,10 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ItemTags.CHEST_ARMOR).add(ModItems.BISMUTH_CHESTPLATE);
         valueLookupBuilder(ItemTags.LEG_ARMOR).add(ModItems.BISMUTH_LEGGINGS);
         valueLookupBuilder(ItemTags.FOOT_ARMOR).add(ModItems.BISMUTH_BOOTS);
+
+        valueLookupBuilder(ItemTags.BOW_ENCHANTABLE).add(ModItems.KAUPEN_BOW);
+        valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE).add(ModItems.KAUPEN_BOW);
+        valueLookupBuilder(ItemTags.SKELETON_PREFERRED_WEAPONS).add(ModItems.KAUPEN_BOW);
+        valueLookupBuilder(ItemTags.WITHER_SKELETON_DISLIKED_WEAPONS).add(ModItems.KAUPEN_BOW);
     }
 }

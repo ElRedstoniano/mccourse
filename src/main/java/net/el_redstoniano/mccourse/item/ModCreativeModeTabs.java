@@ -38,6 +38,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BISMUTH_BOOTS);
 
                         output.accept(ModItems.BISMUTH_HORSE_ARMOR);
+
+                        output.accept(ModItems.KAUPEN_BOW);
                     }).build());
 
     public static final CreativeModeTab BISMUTH_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,

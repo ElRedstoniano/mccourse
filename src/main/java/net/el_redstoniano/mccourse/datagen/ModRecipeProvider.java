@@ -215,6 +215,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
                         .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                         .save(output);
+
+                // Kaupen bow
+                shaped(RecipeCategory.COMBAT, ModItems.KAUPEN_BOW, 1)
+                        .pattern("S# ")
+                        .pattern("S B")
+                        .pattern("S# ")
+                        .define('B', ModItems.BISMUTH)
+                        .define('S', Items.STRING)
+                        .define('#', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.BISMUTH), has(ModItems.BISMUTH))
+                        .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                        .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                        .save(output);
             }
         };
     }
